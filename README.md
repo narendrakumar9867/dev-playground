@@ -1,6 +1,6 @@
 # Development Playground
 
-This repository is my personal development playground for learning, practice, and small project experiments across backend, frontend, databases, AI, DevOps, and system design.
+This repository is my personal development playground for learning, practice, and small project experiments across backend, databases, AI, DevOps, and system design.
 
 The idea is simple: keep related topics in separate folders and let each folder grow into its own runnable example or notes collection.
 
@@ -11,14 +11,13 @@ The idea is simple: keep related topics in separate folders and let each folder 
 - [backend](backend/) - backend practice and service design
 - [databases](databases/) - database-specific examples and configs
 - [devops-cloud](devops-cloud/) - Docker, cloud, and deployment notes
-- [frontend](frontend/) - frontend experiments and UI work
 - [realtime-systems](realtime-systems/) - realtime and event-driven systems
 - [system-design](system-design/) - architecture notes and design practice
 - [testing](testing/) - testing strategies and examples
 
-### How to run a separate folder
+## How to Run a Folder
 
-Each topic folder is independent. To run one folder, go into that folder, install only its local dependencies, and start the entry file from there.
+Each folder is independent. Go into the specific example folder, create a virtual environment, install its dependencies, and run.
 
 Example for the MongoDB folder on Windows:
 
@@ -30,14 +29,21 @@ pip install -r requirements.txt
 uvicorn main:app --reload
 ```
 
-## How To Use The Repo
+Example on Mac/Linux:
 
-Each folder can be treated independently.
+```bash
+cd databases/mongodb
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+uvicorn main:app --reload
+```
 
-- Keep code and notes for one topic inside the matching folder.
-- Add a local `requirements.txt` when a folder contains a Python app.
-- Prefer folder-level setup so each example stays easy to run and understand.
+## How This Repo Is Organized
 
+- Each topic has its own top-level folder.
+- Each example inside a topic has its own subfolder with its own `requirements.txt` and `README.md`.
+- No shared root dependencies — every example is self-contained.
 
 ## What This Repo Is For
 
@@ -48,7 +54,7 @@ Each folder can be treated independently.
 
 ## Contributing
 
-If you want to add something new, read [CONTRIBUTING.md](CONTRIBUTING.md) first.
+If you want to add something, read [CONTRIBUTING.md](CONTRIBUTING.md) first.
 
 ## Notes
 
